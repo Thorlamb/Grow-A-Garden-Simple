@@ -1,1 +1,230 @@
+#login system
+for i in range(3):
+    username = input('Username:')
+    username = username.lower()
+    password = input('Password:')
+    password = password.lower()
+    if username == 'luckilee' and password == '123456':
+        print('Login Successful')
+        break
+    else:
+        print('Login Failed')
 
+#wallet
+coins = 100
+
+#location option
+loca = ''
+plants = ''
+while loca != '4':
+    loca = input('Where do you want to go? (1 - Garden, 2 - Seed Shop, 3 - Sell, 4 - Exit)')
+    #Garden
+    if loca == '1':
+        print(plants)
+    
+    #Seed Shop
+    if loca == '2':
+        def seed_shop():
+            import random
+            rand = random.random
+            seeds = []
+            if rand() <= 1:
+                seeds.append('10c - Carrot Seed')
+                seeds.append('50c - Strawberry Seed')
+                seeds.append('400c - Blueberry Seed')
+            if rand() <= 0.3333:
+                seeds.append('600c - Orange Tulip')
+            if rand() <= 1:
+                seeds.append('800c - Tomato Seed')
+            if rand() <= 0.3333:
+                seeds.append('1,300c - Corn Seed')
+            if rand() <= 0.1429:
+                seeds.append('1,000c - Daffodil Seed')
+            if rand() <= 0.125:
+                seeds.append('2,500c - Watermelon Seed')
+            if rand() <= 0.10:
+                seeds.append('3,000c - Pumpkin Seed')
+            if rand() <= 0.0714:
+                seeds.append('3,250c - Apple Seed')
+            if rand() <= 0.2:
+                seeds.append('4,000c - Bamboo Seed')
+            if rand() <= 0.05:
+                seeds.append('6,000c - Coconut Seed')
+            if rand() <= 0.0333:
+                seeds.append('15,000c - Cactus Seed')
+            if rand() <= 0.02:
+                seeds.append('50,000c - Dragon Fruit Seed')
+            if rand() <= 0.0125:
+                seeds.append('100,000c - Mango Seed')
+            if rand() <= 0.01:
+                seeds.append('850,000c - Grape Seed')
+            if rand() <= 0.0083:
+                seeds.append('150,000c - Mushroom Seed')
+            if rand() <= 0.0071:
+                seeds.append('1,000,000c - Pepper Seed')
+            if rand() <= 0.0063:
+                seeds.append('2,500,000c - Cacao Seed')
+            if rand() <= 0.0048:
+                seeds.append('10,000,000c - Beanstalk Seed')
+            if rand() <= 0.0042:
+                seeds.append('15,000,000c - Ember Lily')
+            if rand() <= 0.0034:
+                seeds.append('25,000,000c - Sugar Apple')
+            if rand() <= 0.0029:
+                seeds.append('40,000,000c - Burning Bud')
+            if rand() <= 0.0031:
+                seeds.append('55,000,000c - Giant Pinecone')
+            return seeds
+        seeds = seed_shop()
+        for seed in seeds:
+            print(seed)
+        
+        #buying mechanic
+        whattype = input('What seed would you want to buy? (back to exit)')
+        whattype = whattype.lower()
+        if whattype == 'carrot':
+            amount = int(input('Amount:'))
+            amountt = 10*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'strawberry':
+            amount = int(input('Amount:'))
+            amountt = 50*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'blueberry':
+            amount = int(input('Amount:'))
+            amountt = 400*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'orange tulip':
+            amount = int(input('Amount:'))
+            amountt = 600*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'tomato':
+            amount = int(input('Amount:'))
+            amountt = 800*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'corn':
+            amount = int(input('Amount:'))
+            amountt = 1300*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'daffodil':
+            amount = int(input('Amount:'))
+            amountt = 1000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'watermelon':
+            amount = int(input('Amount:'))
+            amountt = 2500*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'pumpkin':
+            amount = int(input('Amount:'))
+            amountt = 3000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'apple':
+            amount = int(input('Amount:'))
+            amountt = 3250*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'bamboo':
+            amount = int(input('Amount:'))
+            amountt = 4000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'coconut':
+            amount = int(input('Amount:'))
+            amountt = 6000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'cactus':
+            amount = int(input('Amount:'))
+            amountt = 15000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'dragon fruit':
+            amount = int(input('Amount:'))
+            amountt = 50000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'mango':
+            amount = int(input('Amount:'))
+            amountt = 100000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'grape':
+            amount = int(input('Amount:'))
+            amountt = 850000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'mushroom':
+            amount = int(input('Amount:'))
+            amountt = 150000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'pepper':
+            amount = int(input('Amount:'))
+            amountt = 1000000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'cacao':
+            amount = int(input('Amount:'))
+            amountt = 2500000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'beanstalk':
+            amount = int(input('Amount:'))
+            amountt = 10000000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'ember lily':
+            amount = int(input('Amount:'))
+            amountt = 1500000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'sugar apple':
+            amount = int(input('Amount:'))
+            amountt = 25000000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'burning bud':
+            amount = int(input('Amount:'))
+            amountt = 40000000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        elif whattype == 'giant pinecone':
+            amount = int(input('Amount:'))
+            amountt = 55000000*amount
+            coins = coins - amountt
+            print('Bought', amount, whattype)
+            print('Current Balance:', coins)
+        else:
+            print('Please type correctly')
